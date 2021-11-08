@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: miniweb
+  become: true
+  gather_facts: true
+  tasks:
+    - name: "Include miniweb"
+      include_role:
+        name: "miniweb"

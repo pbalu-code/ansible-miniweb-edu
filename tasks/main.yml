@@ -1,0 +1,42 @@
+---
+# tasks file for miniweb
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 24000
+
+- name: Install Apache2 with PHP
+  apt:
+    name:
+      - apache2
+      - libapache2-mod-php
+      - wget
+    state: present
+
+- name: Enable short open tag
+  community.general.ini_file:
+    path: "/etc/php/{{ ansible_distribution_major_version is version('18', '==') | \
+      ternary('7.2', '7.4') }}/apache2/php.ini"
+    section: PHP
+    option: short_open_tag
+    value: "On"
+  notify: Restart Apache2
+
+- name: Ensure Apache2 service enabled and started
+  service:
+    name: apache2.service
+    state: started
+    enabled: true
+
+- name: Put demo php file into the webroot
+  ansible.builtin.copy:
+    src: index.php
+    dest: /var/www/html
+    owner: www-data
+    group: www-data
+    mode: '0644'
+
+- name: Remove default index.html
+  file:
+    path: /var/www/html/index.html
+    state: absent
