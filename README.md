@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Role Miniweb
 =========
 
@@ -35,4 +34,4 @@ Balázs Petik
 =======
 # ansible-miniweb-edu
 Educational ansible role with molecule and docker
->>>>>>> 8287839b710b02dabe56c0d77800bf6477e10429
+
