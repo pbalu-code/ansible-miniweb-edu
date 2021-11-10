@@ -15,6 +15,8 @@ platforms:
     hostname: miniweb-u18
     image: "geerlingguy/docker-ubuntu1804-ansible:latest"
     network_mode: bridge  # bridge, none, container: foo, host
+    published_ports:
+      - 8080:80
     privileged: true
     tty: true
     tmpfs:
@@ -31,6 +33,8 @@ platforms:
   - name: Miniweb-Ubuntu2004
     hostname: miniweb-u20
     network_mode: bridge  # bridge, none, container: foo, host
+    published_ports:
+      - 8081:80
     groups:
       - miniweb
     image: "geerlingguy/docker-ubuntu2004-ansible:latest"
