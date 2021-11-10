@@ -1,0 +1,7 @@
+---
+- name: postgresql
+  src: https://github.com/pbalu-code/ansible-postgresql.git
+  version: 2.0.1
+#- name: mariadb
+#  src: https://github.com/pbalu-code/ansible-role-mariadb.git
+#  version: v3.1.5

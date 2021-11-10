@@ -5,6 +5,18 @@
     update_cache: yes
     cache_valid_time: 24000
 
+- name: Ensure apt-add-key present
+  apt:
+    name: add-apt-key
+
+- name: Includer PostgreSQL role
+  include_role:
+    name: postgresql
+
+#- name: Includer Mariadb role
+#  include_role:
+#    name: mariadb
+
 - name: Install Apache2 with PHP
   apt:
     name:
