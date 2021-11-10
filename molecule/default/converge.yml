@@ -6,7 +6,4 @@
   tasks:
     - name: "Include miniweb role"
       include_role:
-        name: "miniweb"
-#    - name: "Include mariadb role"
-#      include_role:
-#        name: "mariadb"
+        name: ansible-miniweb-edu

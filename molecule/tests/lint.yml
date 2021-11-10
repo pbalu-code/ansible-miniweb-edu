@@ -2,12 +2,13 @@
 ---
 skip_list:
   - 'command-instead-of-shell'
+  - 'risky-file-permissions'
 warn_list:
   - 'package-latest'
   - 'meta-no-info'
   - 'meta-incorrect'
   - 'meta-no-tags'
-
+  - 'role-name'
 exclude_paths:
   - bin/
   - .idea/
