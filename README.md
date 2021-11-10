@@ -19,13 +19,13 @@ https://molecule.readthedocs.io/en/stable-1.18/driver/
 Requirements
 ------------
 
-Ansible 2.9
-Molecule
-Python testinfra
-flake8
-yamllint
-ansible-lint
-
+ansible==2.10.6  
+ansible-lint  
+molecule==3.2.3  
+molecule_docker==0.2.4  
+pytest_testinfra==6.1.0  
+yamllint  
+flake8  
 
 Author Information
 ------------------
