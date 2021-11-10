@@ -3,6 +3,8 @@
   hosts: miniweb
   become: true
   gather_facts: true
+  vars:
+    postgresql_version: 14
   tasks:
     - name: "Include miniweb role"
       include_role:

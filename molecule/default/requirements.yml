@@ -1,0 +1,5 @@
+---
+roles:
+  - name: postgresql
+    src: https://github.com/pbalu-code/ansible-postgresql.git
+    version: 2.0.1
