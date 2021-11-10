@@ -8,7 +8,7 @@ warn_list:
   - 'meta-no-info'
   - 'meta-incorrect'
   - 'meta-no-tags'
-
+  - 'role-name'
 exclude_paths:
   - bin/
   - .idea/

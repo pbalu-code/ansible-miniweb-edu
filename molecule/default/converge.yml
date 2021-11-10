@@ -6,4 +6,4 @@
   tasks:
     - name: "Include miniweb"
       include_role:
-        name: "miniweb"
+        name: ansible-miniweb-edu
