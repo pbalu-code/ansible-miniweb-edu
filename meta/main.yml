@@ -2,6 +2,7 @@ galaxy_info:
   author: Balazs Petik
   description: Molecule demo role for education purpose.
   # company: The company
+  namespace: balazspetik
   role_name: miniweb
 
   # If the issue tracker for your role is not on github, uncomment the

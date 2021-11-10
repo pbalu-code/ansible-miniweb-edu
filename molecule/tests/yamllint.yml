@@ -1,4 +1,4 @@
-# molecule / tests / yamllint.yml
+# molecule / tests / yamllint.ymlq
 ---
 ignore: |
   molecule/tests/libs/
