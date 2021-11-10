@@ -14,7 +14,6 @@ platforms:
       - miniweb
     hostname: miniweb-u18
     image: "geerlingguy/docker-ubuntu1804-ansible:latest"
-    command: ${MOLECULE_DOCKER_COMMAND:-""}
     network_mode: bridge  # bridge, none, container: foo, host
     privileged: true
     tty: true
@@ -25,7 +24,7 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     capabilities:
       - SYS_ADMIN
-    # command: "/lib/systemd/systemd"
+    command: "/lib/systemd/systemd"
     environment:
       container: docker
     pre_build_image: true
@@ -35,7 +34,6 @@ platforms:
     groups:
       - miniweb
     image: "geerlingguy/docker-ubuntu2004-ansible:latest"
-    command: ${MOLECULE_DOCKER_COMMAND:-""}
     privileged: true
     tty: true
     tmpfs:
@@ -45,7 +43,7 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     capabilities:
       - SYS_ADMIN
-    # command: "/lib/systemd/systemd"
+    command: "/lib/systemd/systemd"
     pre_build_image: true
     environment:
       container: docker
