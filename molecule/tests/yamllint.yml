@@ -6,6 +6,8 @@ ignore: |
   .idea/
   lib/
   lib64/
+  ../../.cache/
+  share/
 #  all/this/directory/
 #  *.template.yaml
 
